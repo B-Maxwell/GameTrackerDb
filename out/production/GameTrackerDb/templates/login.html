@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("https://s19.postimg.org/hb0yzuwj7/xbox_283116.jpg");
+            /*https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/2/f/9/6/highres_421332182.jpeg*/
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: relative;
+            background-color: black;
+            background-attachment: fixed;
+            background-position: center;
+
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        input[type=text] {
+            border: 2px solid black;
+            border-radius: 4px;
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            filter: alpha(Opacity=90);
+            opacity: 0.9;
+
+        }
+
+        input[type=password] {
+            border: 2px solid black;
+            border-radius: 4px;
+            width: 25%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            filter: alpha(Opacity=90);
+            opacity: 0.9;
+        }
+
+        button {
+            border-radius: 3px;
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            background-color: darkred;
+            color: white;
+        }
+
+        button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        button:hover span {
+            padding-right: 25px;
+        }
+
+        button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        h1{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 15px darkred, 0 0 5px gray;
+            letter-spacing: 2px;
+        }
+
+        h2{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 15px darkred, 0 0 5px gray;
+            letter-spacing: 1.5px;
+        }
+
+        #formWrapper{
+            text-align: center;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<html>
+<body>
+
+<h1>Welcome to the Game Tracker</h1>
+<h2>Please login below</h2>
+<form action="/create-user" method="post">
+    <input type="text" placeholder="Enter your name" name="loginName"/>
+    <button type="submit"><span>Login</span></button>
+</form>
+</body>
+</html>
