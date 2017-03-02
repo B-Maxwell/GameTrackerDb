@@ -48,7 +48,7 @@ public class Main {
 
                     Session session = request.session();
                     session.attribute("userName", name);
-
+                    user.games = selectGames(conn);
                     response.redirect("/");
                     return "";
                 })
