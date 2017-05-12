@@ -58,7 +58,6 @@ public class Main {
                 ((request, response) -> {
                     User user = getUserFromSession(request.session());
                     if (user == null) {
-                        //throw new Exception("User is not logged in");
                         Spark.halt(403);
                     }
 
@@ -66,8 +65,7 @@ public class Main {
                     String gameGenre = request.queryParams("gameGenre");
                     String gamePlatform = request.queryParams("gamePlatform");
                     int gameYear = Integer.valueOf(request.queryParams("gameYear"));
-//                    Game game = new Game(gameName, gameGenre, gamePlatform, gameYear);
-//                    user.games.add(game);
+
 
                     insertGame(conn, gameName, gameGenre, gamePlatform, gameYear);
                     user.games = selectGames(conn);
